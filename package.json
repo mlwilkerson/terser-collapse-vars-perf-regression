@@ -1,0 +1,15 @@
+{
+  "name": "terser-collapse-vars-perf-regression",
+  "version": "0.0.1",
+  "description": "Reproduce performance regression of terser --compress collapse_vars=true on module with 1,000 var defs and complex object values. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Wilkerson <mwilkerson@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "terser": "^3.7.6",
+    "uglify-js": "2.8.29"
+  }
+}
