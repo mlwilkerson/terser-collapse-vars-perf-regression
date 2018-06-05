@@ -6,17 +6,20 @@
 1. `yarn` or `npm install`
 
 2. `./node_modules/.bin/terser --compress collapse_vars=true --output output.js index.js`
+
 This will produce a tree-shaken output bundle in about 30 seconds, depending on hardware.
 
 Uses a current version of `terser`, the performance of which--in this scenario--is similar to `uglify-es@3.3.9`, which is the package
 version that webpack 4.11.0 depends upon.
 
 3. `./node_modules/.bin/terser --compress collapse_vars=false --output output.js index.js`
+
 This will produce a tree-shaken output bundle in <1 second, depending on hardware.
 
 Same version of `terser`.
 
 4. `./node_modules/.bin/uglifyjs --compress collapse_vars=true --output output.js index.js`
+
 This will produce a tree-shaken outupt bundle in <1 second, depending on hardware.
 
 This uses `uglify-js@2.8.29`, which is the package version that webpack 3.12.0 depends upon.
