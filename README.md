@@ -1,5 +1,5 @@
 # Description
- Reproduce performance regression of `terser --compress collapse_vars=true` on module with 1,000 var defs and complex object values.
+Reproduce performance regression of `terser --compress collapse_vars=true` on module with 1,000 var defs and complex object values.
 
 # Steps to Reproduce
 
@@ -20,7 +20,7 @@ Same version of `terser`.
 
 4. `./node_modules/.bin/uglifyjs --compress collapse_vars=true --output output.js index.js`
 
-This will produce a tree-shaken outupt bundle in <1 second, depending on hardware.
+This will produce a tree-shaken output bundle in <1 second, depending on hardware.
 
 This uses `uglify-js@2.8.29`, which is the package version that webpack 3.12.0 depends upon.
 
@@ -29,6 +29,10 @@ This uses `uglify-js@2.8.29`, which is the package version that webpack 3.12.0 d
 Something has changed in the processing of the `collapse_vars` option such that the performance in this scenario has slowed down by
 some 60x. I have seen real-world build times up to 80 seconds under `uglify-es@3.3.9` that would have taken 0.5 seconds under
 `uglify-js@2.
+
+# Associated GitHub Issues:
+- [terser #50](https://github.com/fabiosantoscode/terser/issues/50)
+- [uglifyjs #3174](https://github.com/mishoo/UglifyJS2/issues/3174)
 
 # Background
 
