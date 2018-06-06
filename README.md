@@ -28,7 +28,7 @@ This uses `uglify-js@2.8.29`, which is the package version that webpack 3.12.0 d
 
 Something has changed in the processing of the `collapse_vars` option such that the performance in this scenario has slowed down by
 some 60x. I have seen real-world build times up to 80 seconds under `uglify-es@3.3.9` that would have taken 0.5 seconds under
-`uglify-js@2.
+`uglify-js@2.8.29`.
 
 # Associated GitHub Issues:
 - [terser #50](https://github.com/fabiosantoscode/terser/issues/50)
